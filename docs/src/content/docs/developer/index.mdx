@@ -1,0 +1,35 @@
+---
+title: "Developer Documentation"
+description: "Firefox Profiler developer documentation overview."
+---
+
+# Firefox Profiler development docs
+
+[profiler.firefox.com](https://profiler.firefox.com) is a client for reading profiles from the profiler component built inside of Firefox, known as the Gecko Profiler. It also can read in formats from [a variety of sources](/developer/loading-in-profiles). The front-end client is written in [TypeScript](https://www.typescriptlang.org/) using [React](https://facebook.github.io/react/) for the UI components and [Redux](http://redux.js.org/) for the state management. Firefox can interact with this client by directly injecting profiles into the webpage via a WebChannel mechanism. This code lives in Mozilla Central under [devtools/client/performance-new](https://searchfox.org/mozilla-central/source/devtools/client/performance-new)
+
+## The Docs
+
+- [Firefox Profiler src docs](../src)
+  - [Redux action creators - `/src/actions`](../src/actions)
+  - [React components - `/src/components`](../src/components)
+  - [Manipulating and processing profiles - `/src/profile-logic`](../src/profile-logic)
+  - [Redux reducers - `/src/reducers`](../src/reducers)
+  - [Redux selectors- `/src/selectors`](../src/selectors)
+  - [Testing - `/src/test`](../src/test)
+    - [React component testing](../src/test/components)
+    - [Redux store testing](../src/test/store)
+    - [Unit testing](../src/test/unit)
+  - [Types - `/src/types`](../src/types)
+  - [Utility files - `/src/utils`](../src/utils)
+- [Profiler architecture](/developer/architecture)
+- [Loading in profiles from various sources](/developer/loading-in-profiles)
+- [Gecko profile format](/developer/gecko-profile-format)
+- [Processed profile format](/developer/processed-profile-format)
+- [Writing a Custom Profile Importer](/developer/custom-importer)
+- [Markers](/developer/markers)
+- [Profile expiration and upgrading profiles](/developer/upgrading-profiles)
+- [Potential performance data sources in Gecko](/developer/data-sources)
+- [Call tree](/developer/call-tree)
+- [Frames, funcs, stacks and CallNodes in C++](/developer/call-nodes-in-cpp)
+- [Deploying to production](/developer/deploying)
+- [Symbolication](/developer/symbolication)
